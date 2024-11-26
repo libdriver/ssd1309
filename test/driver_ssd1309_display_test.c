@@ -1379,8 +1379,8 @@ uint8_t ssd1309_display_test(ssd1309_interface_t interface, ssd1309_address_t ad
         return 1;
     }
 
-    /* set vertical left horizontal scroll */
-    ssd1309_interface_debug_print("ssd1309: set vertical left horizontal scroll.\n");
+    /* vertical left horizontal scroll */
+    ssd1309_interface_debug_print("ssd1309: vertical left horizontal scroll.\n");
 
     /* clear screen */
     res = ssd1309_clear(&gs_handle);
@@ -1469,8 +1469,8 @@ uint8_t ssd1309_display_test(ssd1309_interface_t interface, ssd1309_address_t ad
         return 1;
     }
     
-    /* set right horizontal scroll one column */
-    ssd1309_interface_debug_print("ssd1309: set right horizontal scroll one column.\n");
+    /* right horizontal scroll one column */
+    ssd1309_interface_debug_print("ssd1309: right horizontal scroll one column.\n");
     
     for (i = 0; i < 64; i++)
     {
@@ -1487,8 +1487,8 @@ uint8_t ssd1309_display_test(ssd1309_interface_t interface, ssd1309_address_t ad
         }
     }
     
-    /* set left horizontal scroll one column */
-    ssd1309_interface_debug_print("ssd1309: set left horizontal scroll one column.\n");
+    /* left horizontal scroll one column */
+    ssd1309_interface_debug_print("ssd1309: left horizontal scroll one column.\n");
     
     for (i = 0; i < 64; i++)
     {

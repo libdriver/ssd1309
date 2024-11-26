@@ -247,9 +247,9 @@ ssd1309: graphic acceleration test.
 ssd1309: right horizontal scroll.
 ssd1309: left horizontal scroll.
 ssd1309: vertical right horizontal scroll.
-ssd1309: set vertical left horizontal scroll.
-ssd1309: set right horizontal scroll one column.
-ssd1309: set left horizontal scroll one column.
+ssd1309: vertical left horizontal scroll.
+ssd1309: right horizontal scroll one column.
+ssd1309: left horizontal scroll one column.
 ssd1309: finish display test.
 ```
 
