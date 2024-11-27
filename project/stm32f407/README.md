@@ -262,7 +262,7 @@ ssd1309: 12345abcdEFGH!@#$<>?{}[];<>.
 ```shell
 ssd1309 -e basic-init --addr=0 --interface=iic
 
-ssd1309: ssd1309: init success.
+ssd1309: init success.
 ```
 
 ```shell
@@ -310,7 +310,7 @@ ssd1309: draw rect 0 0 32 32.
 ```shell
 ssd1309 -e advance-init --addr=0 --interface=iic
 
-ssd1309: ssd1309: init success.
+ssd1309: init success.
 ```
 
 ```shell
