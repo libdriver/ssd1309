@@ -457,7 +457,7 @@ uint8_t ssd1309(uint8_t argc, char** argv)
         }
 
         /* output */
-        ssd1309_interface_debug_print("ssd1309: ssd1309: init success.\n");
+        ssd1309_interface_debug_print("ssd1309: init success.\n");
 
         return 0;
     }
@@ -618,7 +618,7 @@ uint8_t ssd1309(uint8_t argc, char** argv)
         }
 
         /* output */
-        ssd1309_interface_debug_print("ssd1309: ssd1309: init success.\n");
+        ssd1309_interface_debug_print("ssd1309: init success.\n");
 
         return 0;
     }
