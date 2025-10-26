@@ -182,13 +182,13 @@ We use '\n' to wrap lines.If your serial port assistant displays exceptions (e.g
     ssd1309 (-e advance-deactivate-scroll | --example=advance-deactivate-scroll)
     ```
 
-27. Run ssd1309 setting vertical left horizontal scroll function, spage means start page and it can be "0"-"7", epage means end page and it can be "0"-"7", r means display rows and it can be "0" - "63".
+24. Run ssd1309 setting vertical left horizontal scroll function, spage means start page and it can be "0"-"7", epage means end page and it can be "0"-"7", r means display rows and it can be "0" - "63".
 
     ```shell
     ssd1309 (-e advance-left-scroll | --example=advance-left-scroll) [--start=<spage>] [--stop=<epage>] [--row=<r>] [--frame=<FRAME_1 | FRAME_2 | FRAME_3 | FRAME_4 | FRAME_5 | FRAME_64 | FRAME_128 | FRAME_256>]
     ```
 
-28. Run ssd1309 setting vertical right horizontal scroll function, spage means start page and it can be "0"-"7", epage means end page and it can be "0"-"7", r means display rows and it can be "0" - "63".
+25. Run ssd1309 setting vertical right horizontal scroll function, spage means start page and it can be "0"-"7", epage means end page and it can be "0"-"7", r means display rows and it can be "0" - "63".
 
     ```shell
     ssd1309 (-e advance-right-scroll | --example=advance-right-scroll) [--start=<spage>] [--stop=<epage>] [--row=<r>] [--frame=<FRAME_1 | FRAME_2 | FRAME_3 | FRAME_4 | FRAME_5 | FRAME_64 | FRAME_128 | FRAME_256>]
