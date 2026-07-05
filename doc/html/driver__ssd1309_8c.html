@@ -154,7 +154,7 @@ Macros</h2></td></tr>
 <tr class="memitem:af6e73864891952994b4d447159213dc7" id="r_af6e73864891952994b4d447159213dc7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6e73864891952994b4d447159213dc7">SSD1309_CMD_DISPLAY_CLOCK_DIVIDE</a>&#160;&#160;&#160;0xD5</td></tr>
 <tr class="memitem:ab512185c568f392d22d267ec5464da9a" id="r_ab512185c568f392d22d267ec5464da9a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab512185c568f392d22d267ec5464da9a">SSD1309_CMD_PRE_CHARGE_PERIOD</a>&#160;&#160;&#160;0xD9</td></tr>
 <tr class="memitem:a7eda4c725214df3f4b85d59740504314" id="r_a7eda4c725214df3f4b85d59740504314"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7eda4c725214df3f4b85d59740504314">SSD1309_CMD_COM_PINS_CONF</a>&#160;&#160;&#160;0xDA</td></tr>
-<tr class="memitem:a82d06500fa348917ca6cded7b7d2e58c" id="r_a82d06500fa348917ca6cded7b7d2e58c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82d06500fa348917ca6cded7b7d2e58c">SSD1309_CMD_COMH_DESLECT_LEVEL</a>&#160;&#160;&#160;0xDB</td></tr>
+<tr class="memitem:a753ea2081d978025004dce51e8ed92d7" id="r_a753ea2081d978025004dce51e8ed92d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a753ea2081d978025004dce51e8ed92d7">SSD1309_CMD_COMH_DESELECT_LEVEL</a>&#160;&#160;&#160;0xDB</td></tr>
 <tr class="memitem:ad12c2d038a7cd4f0ac9d23859a4e8074" id="r_ad12c2d038a7cd4f0ac9d23859a4e8074"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad12c2d038a7cd4f0ac9d23859a4e8074">SSD1309_CMD_GPIO</a>&#160;&#160;&#160;0xDC</td></tr>
 <tr class="memitem:a76a3af27fd04bdd89044367ccaddfd1e" id="r_a76a3af27fd04bdd89044367ccaddfd1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76a3af27fd04bdd89044367ccaddfd1e">SSD1309_CMD_LOCK</a>&#160;&#160;&#160;0xFD</td></tr>
 </table><table class="memberdecls">
@@ -218,8 +218,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:gac5dfb901e861028014aa2e1494d48020"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the display contrast  <br /></td></tr>
 <tr class="memitem:gaf741216335740397f4eeb033a4cb7789" id="r_gaf741216335740397f4eeb033a4cb7789"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ssd1309__base__driver.html#gaf741216335740397f4eeb033a4cb7789">ssd1309_set_segment_remap</a> (<a class="el" href="group__ssd1309__base__driver.html#ga6f05c34df100510bb4e63e3de1e36785">ssd1309_handle_t</a> *handle, <a class="el" href="group__ssd1309__base__driver.html#ga62d35c8cf22e6db697dfd203d84dd2e4">ssd1309_segment_column_remap_t</a> remap)</td></tr>
 <tr class="memdesc:gaf741216335740397f4eeb033a4cb7789"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the segment remap  <br /></td></tr>
-<tr class="memitem:ga79716ab26df49d3f5bfc5682b079e4ad" id="r_ga79716ab26df49d3f5bfc5682b079e4ad"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ssd1309__base__driver.html#ga79716ab26df49d3f5bfc5682b079e4ad">ssd1309_set_vertical_scroll_area</a> (<a class="el" href="group__ssd1309__base__driver.html#ga6f05c34df100510bb4e63e3de1e36785">ssd1309_handle_t</a> *handle, uint8_t start_row, uint8_t end_row)</td></tr>
-<tr class="memdesc:ga79716ab26df49d3f5bfc5682b079e4ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the vertical scroll area  <br /></td></tr>
+<tr class="memitem:ga5ac0595e31d630f5a6b39763efd80936" id="r_ga5ac0595e31d630f5a6b39763efd80936"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ssd1309__base__driver.html#ga5ac0595e31d630f5a6b39763efd80936">ssd1309_set_vertical_scroll_area</a> (<a class="el" href="group__ssd1309__base__driver.html#ga6f05c34df100510bb4e63e3de1e36785">ssd1309_handle_t</a> *handle, uint8_t start_row, uint8_t scroll_row)</td></tr>
+<tr class="memdesc:ga5ac0595e31d630f5a6b39763efd80936"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the vertical scroll area  <br /></td></tr>
 <tr class="memitem:ga8ba5abc7b722cc3eeec9069e57200639" id="r_ga8ba5abc7b722cc3eeec9069e57200639"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ssd1309__base__driver.html#ga8ba5abc7b722cc3eeec9069e57200639">ssd1309_set_entire_display</a> (<a class="el" href="group__ssd1309__base__driver.html#ga6f05c34df100510bb4e63e3de1e36785">ssd1309_handle_t</a> *handle, <a class="el" href="group__ssd1309__base__driver.html#gac3801130368130ec2334887530309bb0">ssd1309_entire_display_t</a> enable)</td></tr>
 <tr class="memdesc:ga8ba5abc7b722cc3eeec9069e57200639"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable or disable the entire display  <br /></td></tr>
 <tr class="memitem:gab3a0647377988fc41f3a627cbf1cae61" id="r_gab3a0647377988fc41f3a627cbf1cae61"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ssd1309__base__driver.html#gab3a0647377988fc41f3a627cbf1cae61">ssd1309_set_display_mode</a> (<a class="el" href="group__ssd1309__base__driver.html#ga6f05c34df100510bb4e63e3de1e36785">ssd1309_handle_t</a> *handle, <a class="el" href="group__ssd1309__base__driver.html#ga56cf62a30ec2a8f539d6839679aae09a">ssd1309_display_mode_t</a> mode)</td></tr>
@@ -434,14 +434,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a82d06500fa348917ca6cded7b7d2e58c" name="a82d06500fa348917ca6cded7b7d2e58c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82d06500fa348917ca6cded7b7d2e58c">&#9670;&#160;</a></span>SSD1309_CMD_COMH_DESLECT_LEVEL</h2>
+<a id="a753ea2081d978025004dce51e8ed92d7" name="a753ea2081d978025004dce51e8ed92d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a753ea2081d978025004dce51e8ed92d7">&#9670;&#160;</a></span>SSD1309_CMD_COMH_DESELECT_LEVEL</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SSD1309_CMD_COMH_DESLECT_LEVEL&#160;&#160;&#160;0xDB</td>
+          <td class="memname">#define SSD1309_CMD_COMH_DESELECT_LEVEL&#160;&#160;&#160;0xDB</td>
         </tr>
       </table>
 </div><div class="memdoc">

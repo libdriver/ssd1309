@@ -5,7 +5,7 @@ var searchData=
   ['ssd1309_5fcmd_5fcolumn_5f0_5fmapped_5fto_5fseg0_2',['SSD1309_CMD_COLUMN_0_MAPPED_TO_SEG0',['../driver__ssd1309_8c.html#a734832526fa35a9a165e31354595c772',1,'driver_ssd1309.c']]],
   ['ssd1309_5fcmd_5fcolumn_5f127_5fmapped_5fto_5fseg0_3',['SSD1309_CMD_COLUMN_127_MAPPED_TO_SEG0',['../driver__ssd1309_8c.html#a9a55d161feb4e12f1cc3fe4eeea09465',1,'driver_ssd1309.c']]],
   ['ssd1309_5fcmd_5fcom_5fpins_5fconf_4',['SSD1309_CMD_COM_PINS_CONF',['../driver__ssd1309_8c.html#a7eda4c725214df3f4b85d59740504314',1,'driver_ssd1309.c']]],
-  ['ssd1309_5fcmd_5fcomh_5fdeslect_5flevel_5',['SSD1309_CMD_COMH_DESLECT_LEVEL',['../driver__ssd1309_8c.html#a82d06500fa348917ca6cded7b7d2e58c',1,'driver_ssd1309.c']]],
+  ['ssd1309_5fcmd_5fcomh_5fdeselect_5flevel_5',['SSD1309_CMD_COMH_DESELECT_LEVEL',['../driver__ssd1309_8c.html#a753ea2081d978025004dce51e8ed92d7',1,'driver_ssd1309.c']]],
   ['ssd1309_5fcmd_5fcontrast_5fcontrol_6',['SSD1309_CMD_CONTRAST_CONTROL',['../driver__ssd1309_8c.html#a00f35d6d9dffd67a6ccbc7ffffd7b650',1,'driver_ssd1309.c']]],
   ['ssd1309_5fcmd_5fdeactivate_5fscroll_7',['SSD1309_CMD_DEACTIVATE_SCROLL',['../driver__ssd1309_8c.html#a54dd1260f167bd7b5cecbb54526890a8',1,'driver_ssd1309.c']]],
   ['ssd1309_5fcmd_5fdisplay_5fclock_5fdivide_8',['SSD1309_CMD_DISPLAY_CLOCK_DIVIDE',['../driver__ssd1309_8c.html#af6e73864891952994b4d447159213dc7',1,'driver_ssd1309.c']]],

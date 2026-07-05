@@ -9,7 +9,7 @@ var driver__ssd1309_8c =
     [ "SSD1309_CMD_COLUMN_0_MAPPED_TO_SEG0", "driver__ssd1309_8c.html#a734832526fa35a9a165e31354595c772", null ],
     [ "SSD1309_CMD_COLUMN_127_MAPPED_TO_SEG0", "driver__ssd1309_8c.html#a9a55d161feb4e12f1cc3fe4eeea09465", null ],
     [ "SSD1309_CMD_COM_PINS_CONF", "driver__ssd1309_8c.html#a7eda4c725214df3f4b85d59740504314", null ],
-    [ "SSD1309_CMD_COMH_DESLECT_LEVEL", "driver__ssd1309_8c.html#a82d06500fa348917ca6cded7b7d2e58c", null ],
+    [ "SSD1309_CMD_COMH_DESELECT_LEVEL", "driver__ssd1309_8c.html#a753ea2081d978025004dce51e8ed92d7", null ],
     [ "SSD1309_CMD_CONTRAST_CONTROL", "driver__ssd1309_8c.html#a00f35d6d9dffd67a6ccbc7ffffd7b650", null ],
     [ "SSD1309_CMD_DEACTIVATE_SCROLL", "driver__ssd1309_8c.html#a54dd1260f167bd7b5cecbb54526890a8", null ],
     [ "SSD1309_CMD_DISPLAY_CLOCK_DIVIDE", "driver__ssd1309_8c.html#af6e73864891952994b4d447159213dc7", null ],
@@ -89,7 +89,7 @@ var driver__ssd1309_8c =
     [ "ssd1309_set_segment_remap", "group__ssd1309__base__driver.html#gaf741216335740397f4eeb033a4cb7789", null ],
     [ "ssd1309_set_vertical_left_horizontal_scroll", "group__ssd1309__base__driver.html#ga03a7df5822206fc470eb5881d2b34dca", null ],
     [ "ssd1309_set_vertical_right_horizontal_scroll", "group__ssd1309__base__driver.html#gabfbcfdba797b2c73bb66060a7ec2c87e", null ],
-    [ "ssd1309_set_vertical_scroll_area", "group__ssd1309__base__driver.html#ga79716ab26df49d3f5bfc5682b079e4ad", null ],
+    [ "ssd1309_set_vertical_scroll_area", "group__ssd1309__base__driver.html#ga5ac0595e31d630f5a6b39763efd80936", null ],
     [ "ssd1309_write_cmd", "group__ssd1309__extend__driver.html#ga23b96335569817f2b0a4ba6d39cb7a99", null ],
     [ "ssd1309_write_data", "group__ssd1309__extend__driver.html#ga2529d6608e0415281b61b194c8c09fdd", null ],
     [ "ssd1309_write_point", "group__ssd1309__base__driver.html#ga7b3f1addf5fe67ffae061f33ec54e4fe", null ]
