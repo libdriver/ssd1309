@@ -90,7 +90,7 @@
 #define SSD1309_CMD_DISPLAY_CLOCK_DIVIDE                    0xD5        /**< command display clock divide */ 
 #define SSD1309_CMD_PRE_CHARGE_PERIOD                       0xD9        /**< command pre charge period */ 
 #define SSD1309_CMD_COM_PINS_CONF                           0xDA        /**< command com pins conf */ 
-#define SSD1309_CMD_COMH_DESLECT_LEVEL                      0xDB        /**< command comh deslect level */ 
+#define SSD1309_CMD_COMH_DESELECT_LEVEL                     0xDB        /**< command comh deslect level */ 
 #define SSD1309_CMD_GPIO                                    0xDC        /**< command set gpio */ 
 #define SSD1309_CMD_LOCK                                    0xFD        /**< command set lock */
 
@@ -495,7 +495,7 @@ uint8_t ssd1309_write_point(ssd1309_handle_t *handle, uint8_t x, uint8_t y, uint
         
         return 1;                                                                                              /* return error */
     }
-    if (a_ssd1309_write_byte(handle, SSD1309_CMD_HIGHER_COLUMN_START_ADDRESS|((x>4)&0x0F), SSD1309_CMD) != 0)  /* write higher column */
+    if (a_ssd1309_write_byte(handle, SSD1309_CMD_HIGHER_COLUMN_START_ADDRESS|((x>>4)&0x0F), SSD1309_CMD) != 0) /* write higher column */
     {
         handle->debug_print("ssd1309: write byte failed.\n");                                                  /* write byte failed */
         
@@ -1816,20 +1816,18 @@ uint8_t ssd1309_set_segment_remap(ssd1309_handle_t *handle, ssd1309_segment_colu
  * @brief     set the vertical scroll area
  * @param[in] *handle pointer to an ssd1309 handle structure
  * @param[in] start_row start row
- * @param[in] end_row end row
+ * @param[in] scroll_row scroll row
  * @return    status code
  *            - 0 success
  *            - 1 set vertical scroll area failed
  *            - 2 handle is NULL
  *            - 3 handle is not initialized
  *            - 4 start_row is invalid
- *            - 5 end_row is invalid
- *            - 6 end_row > start_row
- * @note      start_row <= 0x3F
- *            end_row <= 0x7F
- *            start_row >= end_row
+ *            - 5 scroll_row is invalid
+ *            - 6 start_row + scroll_row > 64
+* @note       start_row <= 0x3F, scroll_row <= 0x7F, start_row + scroll_row <= 64
  */
-uint8_t ssd1309_set_vertical_scroll_area(ssd1309_handle_t *handle, uint8_t start_row, uint8_t end_row)
+uint8_t ssd1309_set_vertical_scroll_area(ssd1309_handle_t *handle, uint8_t start_row, uint8_t scroll_row)
 {
     uint8_t buf[3];
     
@@ -1847,22 +1845,22 @@ uint8_t ssd1309_set_vertical_scroll_area(ssd1309_handle_t *handle, uint8_t start
        
         return 4;                                                                       /* return error */
     }
-    if (end_row > 0x7F)                                                                 /* check end_row */
+    if (scroll_row > 0x7F)                                                              /* check scroll row */
     {
-        handle->debug_print("ssd1309: end_row is invalid.\n");                          /* end_row is invalid */
+        handle->debug_print("ssd1309: scroll_row is invalid.\n");                       /* scroll_row is invalid */
        
         return 5;                                                                       /* return error */
     }
-    if (end_row > start_row)                                                            /* check start_row and end_row */
+    if (start_row + scroll_row > 64)                                                    /* check start_row and scroll_row */
     {
-        handle->debug_print("ssd1309: end_row > start_row.\n");                         /* end_row > start_row */
+        handle->debug_print("ssd1309: start_row + scroll_row > 64.\n");                 /* start_row + scroll_row > 64 */
        
         return 6;                                                                       /* return error */
     }
     
     buf[0] = SSD1309_CMD_VERTICAL_SCROLL_AREA;                                          /* set command */
     buf[1] = start_row;                                                                 /* set start row */
-    buf[2] = end_row;                                                                   /* set end row */
+    buf[2] = scroll_row;                                                                /* set scroll row */
   
     return a_ssd1309_multiple_write_byte(handle, (uint8_t *)buf, 3, SSD1309_CMD);       /* write command */
 }
@@ -2255,7 +2253,7 @@ uint8_t ssd1309_set_deselect_level(ssd1309_handle_t *handle, ssd1309_deselect_le
         return 3;                                                                       /* return error */
     }
     
-    buf[0] = SSD1309_CMD_COMH_DESLECT_LEVEL;                                            /* set command */
+    buf[0] = SSD1309_CMD_COMH_DESELECT_LEVEL;                                           /* set command */
     buf[1] = (uint8_t)(level << 2);                                                     /* set level */
   
     return a_ssd1309_multiple_write_byte(handle, (uint8_t *)buf, 2, SSD1309_CMD);       /* write command */
@@ -2324,7 +2322,7 @@ uint8_t ssd1309_set_right_horizontal_scroll_one_column(ssd1309_handle_t *handle,
     buf[0] = SSD1309_CMD_RIGHT_HORIZONTAL_SCROLL_ONE_COL;                               /* set command */
     buf[1] = 0x00;                                                                      /* set null */
     buf[2] = start_page_addr & 0x07;                                                    /* set start page address */
-    buf[3] = 0x00;                                                                      /* set 0x00 */
+    buf[3] = 0x01;                                                                      /* set 0x01 */
     buf[4] = end_page_addr & 0x07;                                                      /* set end page address */
     buf[5] = 0x00;                                                                      /* set null */
     buf[6] = start_column_addr;                                                         /* set start column addr */
@@ -2396,7 +2394,7 @@ uint8_t ssd1309_set_left_horizontal_scroll_one_column(ssd1309_handle_t *handle, 
     buf[0] = SSD1309_CMD_LEFT_HORIZONTAL_SCROLL_ONE_COL;                                /* set command */
     buf[1] = 0x00;                                                                      /* set null */
     buf[2] = start_page_addr & 0x07;                                                    /* set start page address */
-    buf[3] = 0x00;                                                                      /* set 0x00 */
+    buf[3] = 0x01;                                                                      /* set 0x01 */
     buf[4] = end_page_addr & 0x07;                                                      /* set end page address */
     buf[5] = 0x00;                                                                      /* set null */
     buf[6] = start_column_addr;                                                         /* set start column addr */
@@ -2460,7 +2458,7 @@ uint8_t ssd1309_set_mcu_interface_lock(ssd1309_handle_t *handle, ssd1309_bool_t 
     }
     
     buf[0] = SSD1309_CMD_LOCK;                                                          /* set command */
-    buf[1] = enable;                                                                    /* set bool */
+    buf[1] = (enable == SSD1309_BOOL_TRUE) ? 0x16 : 0x12;                               /* set bool */
   
     return a_ssd1309_multiple_write_byte(handle, (uint8_t *)buf, 2, SSD1309_CMD);       /* write command */
 }
